@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedPointy", "FixedPointy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scratch", "Scratch\Scratch.csproj", "{E289E228-2478-408C-8E33-DA9F0239CA8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedPointy.Tests", "FixedPointy.Tests\FixedPointy.Tests.csproj", "{BB526C04-D871-47BF-8F79-763EA3E36D45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -39,6 +41,18 @@ Global
 		{E289E228-2478-408C-8E33-DA9F0239CA8C}.Release|x64.Build.0 = Release|x64
 		{E289E228-2478-408C-8E33-DA9F0239CA8C}.Release|x86.ActiveCfg = Release|x86
 		{E289E228-2478-408C-8E33-DA9F0239CA8C}.Release|x86.Build.0 = Release|x86
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Debug|x86.Build.0 = Debug|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Release|x86.ActiveCfg = Release|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Release|x86.Build.0 = Release|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Debug|x64.Build.0 = Debug|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Release|x64.ActiveCfg = Release|Any CPU
+		{BB526C04-D871-47BF-8F79-763EA3E36D45}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Scratch\Scratch.csproj
