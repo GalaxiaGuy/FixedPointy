@@ -158,7 +158,19 @@ namespace FixedPointy {
 		}
 
 		public static Fix Tan (Fix degrees) {
-			return Sin(degrees) / Cos(degrees);
+            var s = Sin(degrees);
+            if (s.Raw == 0)
+            {
+                return Fix.Zero;
+            }
+
+            var c = Cos(degrees);
+            if (c.Raw == 0)
+            {
+                throw new OverflowException();
+            }
+
+			return s / c;
 		}
 
 		public static Fix Asin (Fix value) {

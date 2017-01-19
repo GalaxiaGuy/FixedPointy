@@ -37,6 +37,7 @@
     <Compile Include="Fix.Ctor.cs" />
     <Compile Include="Fix.Float.cs" />
     <Compile Include="Fix.Double.cs" />
+    <Compile Include="FixMath.Trig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
