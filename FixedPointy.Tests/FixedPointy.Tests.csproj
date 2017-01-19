@@ -34,9 +34,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SanityTest.cs" />
+    <Compile Include="Fix.Ctor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FixedPointy.csproj">
+      <Project>{11552C15-9E8E-4036-B7F0-EA4919977C01}</Project>
+      <Name>FixedPointy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
