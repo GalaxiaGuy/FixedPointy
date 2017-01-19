@@ -4,20 +4,20 @@ using NUnit.Framework;
 namespace FixedPointy.Tests
 {
     [TestFixture]
-    public class FixFromFloatTests
+    public class FixFromDoubleTests
     {
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(-1)]
-        [TestCase(0.1f)]
-        [TestCase(-0.1f)]
-        [TestCase((float)Math.PI)]
-        [TestCase((float)Math.E)]
-        public void ConversionFromValidValueWorks(float value)
+        [TestCase(0.1)]
+        [TestCase(-0.1)]
+        [TestCase(Math.PI)]
+        [TestCase(Math.E)]
+        public void RoundTripWorks(double value)
         {
             var fix = (Fix)value;
 
-            var result = (float)fix;
+            var result = (double)fix;
 
             Assert.AreEqual(value, result, (double)Fix.Epsilon);
         }

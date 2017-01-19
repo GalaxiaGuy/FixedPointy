@@ -35,8 +35,8 @@
   <ItemGroup>
     <Compile Include="SanityTest.cs" />
     <Compile Include="Fix.Ctor.cs" />
-    <Compile Include="Fix.FromFloat.cs" />
-    <Compile Include="Fix.FromDouble.cs" />
+    <Compile Include="Fix.Float.cs" />
+    <Compile Include="Fix.Double.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
