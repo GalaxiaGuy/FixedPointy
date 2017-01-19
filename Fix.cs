@@ -41,6 +41,8 @@ namespace FixedPointy {
 		public static readonly Fix MaxValue = new Fix(int.MaxValue);
 		public static readonly Fix Epsilon = new Fix(1);
 
+        internal const long ONE_RAW = 1 << FRACTIONAL_BITS;
+
 		static Fix () {
 #pragma warning disable CS0162 // Unreachable code detected
             if (FRACTIONAL_BITS < 8)
@@ -84,6 +86,16 @@ namespace FixedPointy {
 		public static implicit operator Fix (int value) {
 			return new Fix(value << FRACTIONAL_BITS);
 		}
+
+        public static explicit operator Fix(double value)
+        {
+            return new Fix((int)(value * ONE_RAW));
+        }
+
+        public static explicit operator Fix(float value)
+        {
+            return new Fix((int)((double)value * ONE_RAW));
+        }
 
 		public static bool operator == (Fix lhs, Fix rhs) {
 			return lhs._raw == rhs._raw;
