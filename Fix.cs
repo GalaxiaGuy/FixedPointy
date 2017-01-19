@@ -26,14 +26,14 @@ using System.Text;
 
 namespace FixedPointy {
 	public struct Fix {
-		internal const int FRACTIONAL_BITS = 16;
+		public const int FRACTIONAL_BITS = 16;
 
-		internal const int INTEGER_BITS = sizeof(int) * 8 - FRACTIONAL_BITS;
-		internal const int FRACTION_MASK = (int)(uint.MaxValue >> INTEGER_BITS);
-		internal const int INTEGER_MASK = (int)(-1 & ~FRACTION_MASK);
-		internal const int FRACTION_RANGE = FRACTION_MASK + 1;
-		internal const int MIN_INTEGER = int.MinValue >> FRACTIONAL_BITS;
-		internal const int MAX_INTEGER = int.MaxValue >> FRACTIONAL_BITS;
+		public const int INTEGER_BITS = sizeof(int) * 8 - FRACTIONAL_BITS;
+		public const int FRACTION_MASK = (int)(uint.MaxValue >> INTEGER_BITS);
+		public const int INTEGER_MASK = (-1 & ~FRACTION_MASK);
+		public const int FRACTION_RANGE = FRACTION_MASK + 1;
+		public const int MIN_INTEGER = int.MinValue >> FRACTIONAL_BITS;
+		public const int MAX_INTEGER = int.MaxValue >> FRACTIONAL_BITS;
 
 		public static readonly Fix Zero = new Fix(0);
 		public static readonly Fix One = new Fix(FRACTION_RANGE);
@@ -51,14 +51,6 @@ namespace FixedPointy {
 				throw new Exception("Fix must have an even number of fractional and integer bits.");
 #pragma warning restore CS0162
 		}
-
-		public static int FractionalBits { get { return FRACTIONAL_BITS; } }
-		public static int IntegerBits { get { return INTEGER_BITS; } }
-		public static int FractionMask { get { return FRACTION_MASK; } }
-		public static int IntegerMask { get { return INTEGER_MASK; } }
-		public static int FractionRange { get { return FRACTION_RANGE; } }
-		public static int MinInteger { get { return MIN_INTEGER; } }
-		public static int MaxInteger { get { return MAX_INTEGER; } }
 
 		public static Fix Mix (int integer, int numerator, int denominator) {
 			if (numerator < 0 || denominator < 0)
