@@ -27,8 +27,6 @@ namespace FixedPointy {
 	public static partial class FixMath {
 		static FixConst _piConst = new FixConst(13493037705);
 		static FixConst _eConst = new FixConst(11674931555);
-		static FixConst _log2_EConst = new FixConst(6196328019);
-		static FixConst _log2_10Const = new FixConst(14267572527);
 		static FixConst _ln2Const = new FixConst(2977044472);
 		static FixConst _log10_2Const = new FixConst(1292913986);
 
@@ -137,15 +135,6 @@ namespace FixedPointy {
 			new FixConst(60078978), new FixConst(30039490), new FixConst(15019745), new FixConst(7509872), 
 			new FixConst(3754936), new FixConst(1877468), new FixConst(938734), new FixConst(469367), 
 			new FixConst(234684), new FixConst(117342), new FixConst(58671), new FixConst(29335), 
-		};
-
-		static FixConst[] _cordicGainConsts = {
-			new FixConst(3037000500), new FixConst(2716375826), new FixConst(2635271635), new FixConst(2614921743), 
-			new FixConst(2609829388), new FixConst(2608555990), new FixConst(2608237621), new FixConst(2608158028), 
-			new FixConst(2608138129), new FixConst(2608133154), new FixConst(2608131911), new FixConst(2608131600), 
-			new FixConst(2608131522), new FixConst(2608131503), new FixConst(2608131498), new FixConst(2608131497), 
-			new FixConst(2608131496), new FixConst(2608131496), new FixConst(2608131496), new FixConst(2608131496), 
-			new FixConst(2608131496), new FixConst(2608131496), new FixConst(2608131496), new FixConst(2608131496), 
 		};
 		#endregion
 

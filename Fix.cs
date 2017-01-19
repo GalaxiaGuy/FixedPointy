@@ -42,12 +42,14 @@ namespace FixedPointy {
 		public static readonly Fix Epsilon = new Fix(1);
 
 		static Fix () {
-			if (FRACTIONAL_BITS < 8)
+#pragma warning disable CS0162 // Unreachable code detected
+            if (FRACTIONAL_BITS < 8)
 				throw new Exception("Fix must have at least 8 fractional bits.");
 			if (INTEGER_BITS < 10)
 				throw new Exception("Fix must have at least 10 integer bits.");
 			if (FRACTIONAL_BITS % 2 == 1)
 				throw new Exception("Fix must have an even number of fractional and integer bits.");
+#pragma warning restore CS0162
 		}
 
 		public static int FractionalBits { get { return FRACTIONAL_BITS; } }

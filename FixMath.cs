@@ -28,30 +28,26 @@ namespace FixedPointy {
 	public static partial class FixMath {
 		public static readonly Fix PI;
 		public static readonly Fix E;
-		static Fix _log2_E;
-		static Fix _log2_10;
 		static Fix _ln2;
 		static Fix _log10_2;
 		static Fix[] _quarterSine;
 		static Fix[] _cordicAngles;
-		static Fix[] _cordicGains;
 
 		static FixMath () {
-			if (_quarterSineResPower >= Fix.FRACTIONAL_BITS)
+            if(_quarterSineResPower >= Fix.FRACTIONAL_BITS)
+#pragma warning disable CS0162 // Unreachable code detected
 				throw new Exception("_quarterSineResPower must be less than Fix.FractionalBits.");
+#pragma warning restore CS0162
 			if (_quarterSineConsts.Length !=  90 * (1 << _quarterSineResPower) + 1)
 				throw new Exception("_quarterSineConst.Length must be 90 * 2^(_quarterSineResPower) + 1."); 
 
 			PI = _piConst;
 			E = _eConst;
-			_log2_E = _log2_EConst;
-			_log2_10 = _log2_10Const;
 			_ln2 = _ln2Const;
 			_log10_2 = _log10_2Const;
 
 			_quarterSine = Array.ConvertAll(_quarterSineConsts, c => (Fix)c);
 			_cordicAngles = Array.ConvertAll(_cordicAngleConsts, c => (Fix)c);
-			_cordicGains = Array.ConvertAll(_cordicGainConsts, c => (Fix)c);
 		}
 
 		public static Fix Abs (Fix value) {
