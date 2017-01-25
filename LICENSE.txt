@@ -1,6 +1,6 @@
 FixedPointy - A C# fixed-point math library.
 
-Copyright (c) 2013 Jameson Ernst
+Copyright (c) 2013 Jameson Ernst, 2017 Oliver Brown
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
