@@ -38,6 +38,7 @@
     <Compile Include="Fix.Float.cs" />
     <Compile Include="Fix.Double.cs" />
     <Compile Include="FixMath.Trig.cs" />
+    <Compile Include="FixMath.Sqrt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
